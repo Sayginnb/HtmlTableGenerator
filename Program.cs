@@ -1,4 +1,8 @@
 ﻿using System.Text.Json;
 
-// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+string fileName = "movies.json";
+string folderName = "Data";
+string rootPath = Environment.CurrentDirectory;
+string fullPath = Path.Combine(rootPath, folderName, fileName);
+
+string strJSON = File.ReadAllText(fullPath);
